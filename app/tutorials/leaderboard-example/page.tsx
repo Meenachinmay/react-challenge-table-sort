@@ -149,20 +149,21 @@ function Leaderboard() {
               }}
             >
               {finalArticles.map((article) => (
-                <Reorder.Item key={article.title} value={article} as="tr">
-                  <motion.td layout className={`border text-center px-4 py-2}`}>
+                <Reorder.Item
+                  key={article.title}
+                  value={article}
+                  as="tr"
+                  className={`${
+                    "hover:bg-blue-100 hover:shadow-xl"
+                  }`}
+                >
+                  <motion.td layout className="border text-center px-4 py-2">
                     {article.title}
                   </motion.td>
-                  <motion.td
-                    layout
-                    className={`border text-center px-4 py-2 }`}
-                  >
+                  <motion.td layout className="border text-center px-4 py-2">
                     {article.upvotes}
                   </motion.td>
-                  <motion.td
-                    layout
-                    className={`border text-center px-4 py-2 }`}
-                  >
+                  <motion.td layout className="border text-center px-4 py-2">
                     {article.date}
                   </motion.td>
                 </Reorder.Item>
